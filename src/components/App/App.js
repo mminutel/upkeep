@@ -16,8 +16,7 @@ class App extends Component {
         <BrowserRouter>
           <main className="app-main">
               <Switch>
-                <Route exact path='/applications' component={Applications} />
-                <Route path='/applications/:application' component={Applications} />
+                <Route path='/applications' component={Applications} />
                 <Route path='/contacts' component={Contacts} />
                 <Route path='/tasks' component={Tasks} />
               </Switch>
