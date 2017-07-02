@@ -6,6 +6,7 @@ class Applications extends Component {
   render() {
     return (
       <div>
+        {this.props.match.params.application}
       </div>
     );
   }

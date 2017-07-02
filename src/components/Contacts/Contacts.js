@@ -6,6 +6,7 @@ class Contacts extends Component {
   render() {
     return (
       <div>
+        This is the contact component!
       </div>
     );
   }

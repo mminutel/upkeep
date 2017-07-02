@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import Applications from '../Applications/Applications';
+import Contacts from '../Contacts/Contacts';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
 class App extends Component {
 
@@ -9,7 +12,15 @@ class App extends Component {
     return (
       <div>
         <header className="app-header"><Header /></header>
-        <main className="app-main">--Main goes here.--</main>
+        <BrowserRouter>
+          <main className="app-main">
+              <Switch>
+                <Route exact path='/applications' component={Applications} />
+                <Route path='/applications/:application' component={Applications} />
+                <Route path='/contacts' component={Contacts} />
+              </Switch>
+          </main>
+        </BrowserRouter>
         <footer className="app-footer"><Footer /></footer>
       </div>
     );
